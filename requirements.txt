@@ -1,8 +1,7 @@
-torch>=2.0.0
-torchaudio>=2.0.0
 streamlit
-demucs
-soundfile
+pandas
 numpy<2.0
 plotly
-pandas
+librosa
+matplotlib
+soundfile
