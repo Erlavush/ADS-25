@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment
+.env
+.venv
+env/
+venv/
+
+# Large Media Files (Don't push these!)
+*.mp3
+*.wav
+*.pdf
+*.png
+*.jpg
+
+# Models
+*.pth
+*.pt
+outputs/
+
+# VS Code
+.vscode/

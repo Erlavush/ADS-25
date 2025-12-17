@@ -1,0 +1,8 @@
+torch>=2.0.0
+torchaudio>=2.0.0
+streamlit
+demucs
+soundfile
+numpy<2.0
+plotly
+pandas

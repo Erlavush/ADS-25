@@ -1,0 +1,88 @@
+For your data science project (Learning Evidence), I strongly recommend using Shiny for Python as your main framework for developing interactive dashboards and web applications. Shiny allows you to build and share dynamic data-driven apps directly from Python, making it an excellent choice for communicating analytical results, visualizations, and machine learning predictions in an interactive way. You can also use Shiny for R if you're more confortable with R.
+
+In addition to Shiny, you may also explore the following alternative tools for data app development and model deployment for Python:
+
+Interactive Data App Frameworks:
+
+Streamlit – ideal for quickly building and deploying interactive data science dashboards with simple syntax.
+
+Dash (by Plotly) – great for creating highly customizable analytical apps and visualizations.
+
+Panel – integrates multiple visualization libraries such as Bokeh, Plotly, and Matplotlib into cohesive dashboards.
+
+Gradio – useful for deploying machine learning models with user-friendly web interfaces.
+
+General-Purpose Python Web Frameworks (for more advanced deployment):
+
+Flask – a lightweight and flexible micro web framework suitable for deploying APIs or integrating ML models into web applications.
+
+Django – a full-featured web framework for building scalable, database-driven applications with authentication, routing, and admin panels.
+
+FastAPI – a modern, high-performance framework for building APIs and serving machine learning models efficiently.
+
+Your choice of framework will depend on the complexity of your project, the intended audience, and your comfort level with web technologies. Shiny remains a highly accessible and powerful starting point, but exploring alternatives will help you broaden your understanding of how data science integrates into real-world applications.
+
+
+Instructions
+
+This learning evidence serves as the culminating output for your Applied Data Science course.
+
+Students will demonstrate mastery of the data science life cycle by designing, implementing, and communicating a complete data-driven solution to a real-world problem.
+
+The final output should be:
+
+Live or tangible (e.g., a deployed web dashboard, Streamlit/Shiny app).
+
+Demonstrate the full data science cycle — including problem definition, data collection, preprocessing, modeling, evaluation, and communication.
+
+Your app or dashboard must:
+
+Display interactive visualizations of your dataset
+
+Include summary statistics or KPIs
+
+Show model results or insights
+
+Contain a short descriptive narrative (context, findings, and recommendations)
+
+Here are some suggested topics:
+
+Education: Predict student performance or engagement in Moodle
+
+Business: Forecast monthly sales based on customer behavior
+
+Environment: Analyze local air quality and temperature trends
+
+Health: Predict the likelihood of heart disease from patient data
+
+Transportation: Cluster traffic accident hotspots using geospatial data
+
+Sample Project Flow
+
+Example (Python + Streamlit):
+
+Problem: Predict student dropout risk
+
+Data: Moodle course logs (logins, quiz attempts, forum posts)
+
+Cleaning: Use Polars to handle missing or incorrect entries
+
+EDA: Plotnine to visualize engagement vs. grades
+x
+Modeling: Random Forest for prediction, K-Means for engagement clusters
+
+Evaluation: Accuracy = 0.84, Silhouette = 0.63
+
+Deployment: Streamlit app with interactive inputs for teachers
+
+Communication: App hosted on Streamlit Cloud with clear insights
+
+Submission Guidelines
+
+Deadline: 19 December 2025
+
+Format: URL or Actual Demo (recorded video link) and short descriptive narrative (via UVE)
+
+Group Size: 1–3 members
+
+Grading: Refer to the LE rubric in the syllabus
