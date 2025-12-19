@@ -161,6 +161,19 @@ with st.container(border=True):
 # ==========================================
 st.header("📊 Data & Performance")
 
+# KPI ROW
+kpi1, kpi2, kpi3, kpi4 = st.columns(4)
+with kpi1:
+    st.metric("Top SDR Score", "11.36 dB", delta="Vocals")
+with kpi2:
+    st.metric("Total Songs", "150", "MUSDB18")
+with kpi3:
+    st.metric("Training Epochs", "100", "Converged")
+with kpi4:
+    st.metric("Architecture", "Hybrid", "Ensemble")
+
+st.markdown("---")
+
 col_d1, col_d2 = st.columns(2)
 
 with col_d1:
@@ -268,3 +281,46 @@ with st.container(border=True):
                     st.plotly_chart(fig_psd, use_container_width=True)
     else:
         st.warning("⚠️ No local demo files found.")
+
+# ==========================================
+# 5. NARRATIVE & CONCLUSIONS
+# ==========================================
+st.markdown("---")
+with st.container(border=True):
+    st.header("📝 Project Narrative & Data Science Cycle")
+    
+    st.subheader("🔄 The Data Science Lifecycle")
+    
+    # Graphviz Chart for DS Cycle
+    st.graphviz_chart("""
+    digraph {
+        rankdir=LR;
+        node [shape=box, style=filled, fillcolor="#09090b", fontcolor="white", fontname="Outfit", color="#6366f1"];
+        edge [color="#a855f7"];
+        bgcolor="#00000000";
+
+        P [label="1. Problem Definition\n(Costly Software)"];
+        D [label="2. Data Collection\n(MUSDB18 Dataset)"];
+        Pre [label="3. Preprocessing\n(Spectrogram Transformation)"];
+        M [label="4. Modeling\n(Hybrid Ensemble: Demucs+MDX)"];
+        E [label="5. Evaluation\n(SDR Metrics vs Baseline)"];
+        C [label="6. Communication\n(Dashboard & Deployment)"];
+
+        P -> D -> Pre -> M -> E -> C;
+    }
+    """)
+
+    st.subheader("📄 Key Insights")
+    st.markdown("""
+    **1. Context (Problem Definition)**  
+    High-quality audio source separation is traditionally restricted to expensive, proprietary software. **SpecTacles** bridges this gap by offering a free, open-source tool for students and researchers.
+
+    **2. Findings (Evaluation)**  
+    *   **Ensemble Superiority**: Our hybrid model (SpecTacles) outperforms the single-model baseline (MDX Base) by **+0.17 dB** on Vocals and **+0.8 dB** on Drums.
+    *   **Efficiency**: The model converged within **100 epochs** on just **100 training songs**, proving that massive datasets aren't always necessary for effective generalization.
+
+    **3. Recommendations (Future Work)**  
+    *   **Edge Deployment**: Optimize with ONNX for mobile use.
+    *   **Dataset Expansion**: Add non-Western music genres.
+    *   **Real-Time Processing**: Explore streaming capabilities for live performance.
+    """)
